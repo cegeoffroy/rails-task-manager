@@ -1,18 +1,23 @@
-<h1>My tasks</h1>
-
-<ul>
-<% @tasks.each do |task| %>
-  <li>
-    <div>
-      <input type="checkbox" id="task" name="task"
-         <% if task.completed == true %>
-         checked>
-         <% end %>
-      <label for="task">
-        <%= link_to task.title, task_path(task) %>
-      </label>
-      <p><%= task.details %></p>
-    </div>
-  </li>
-<% end %>
-</ul>
+<div class="container">
+  <h1>My tasks</h1>
+  <div class="container-list">
+    <ul class="form-list">
+    <% @tasks.each do |task| %>
+      <li>
+        <div>
+          <input type="checkbox" id="task" name="task"
+             <% if task.completed == true %>
+             checked>
+             <% end %>
+          <label for="task" class="label-task">
+            <%= link_to task.title, task_path(task) %>
+          </label>
+        </div>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+  <div class="container-btn">
+    <a class="btn btn-gradient" href="tasks/new">Add new task</a>
+  </div>
+</div>

@@ -1,5 +1,24 @@
+<div class="container-show">
 <h1><%= @task.title %></h1>
-<p><%= @task.details %></p>
+  <div class="container-form">
+    <p class="task-details"><%= @task.details %></p>
+    <% if @task.completed == true %>
+        <input type="checkbox" checked>
+        <%= 'This task is completed' %>
+    <% else %>
+        <input type="checkbox">
+        <%= 'This task is not completed' %>
+    <% end %>
 
-<%= link_to "Back", tasks_path %>
+  </div>
+  <div class="show-btns">
+    <p class="btn btn-gradient"><%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: "Are you sure?" }%></p>
+    <p><%= link_to "<< Back to list", tasks_path %></p>
+  </div>
+</div>
+
+
+
+
+
 

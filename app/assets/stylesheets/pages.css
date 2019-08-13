@@ -1,0 +1,23 @@
+.container {
+  display: block;
+}
+
+.container-list {
+  align-content: left;
+}
+
+.container-show {
+  width: 400px;
+  margin-left: 20px;
+}
+
+.task-details {
+  list-style: none;
+  padding: 20px;
+  background: lightgrey;
+}
+
+.show-btns {
+  margin-right: 20px;
+  margin-top:20px;
+}
